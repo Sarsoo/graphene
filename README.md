@@ -1,2 +1,3 @@
-# nanoelectronics-coursework
- Post-grad nanolectronics and devices coursework, terahertz graphene applications and 2D sheet conductivity modelling
+# Graphene Coursework
+
+Post-grad nanolectronics and devices coursework, terahertz graphene applications and 2D sheet conductivity modelling

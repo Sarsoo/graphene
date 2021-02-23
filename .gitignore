@@ -1,0 +1,6 @@
+*~*
+*#
+*.pdf
+samples
+*.asv
+!final-report.pdf
