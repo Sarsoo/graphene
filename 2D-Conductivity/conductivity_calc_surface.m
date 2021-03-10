@@ -36,7 +36,8 @@ figure(1)
 surf(f_vals, y_vals, transpose(real(cond)));
 h = gca;
 rotate3d on
-grid();
+grid;
+colorbar;
 set(h, 'xscale', 'log')
 set(h, 'yscale', 'log')
 title('2D Sheet Real Conductivity');
@@ -52,7 +53,8 @@ figure(2)
 surf(f_vals, y_vals, transpose(imag(cond)));
 h = gca;
 rotate3d on
-grid();
+grid;
+colorbar;
 set(h, 'xscale', 'log')
 set(h, 'yscale', 'log')
 title('2D Sheet Imaginary Conductivity');

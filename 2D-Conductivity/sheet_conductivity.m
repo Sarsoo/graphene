@@ -3,7 +3,7 @@ function conductivity = sheet_conductivity(omega, fermi_level, temp, scatter_lif
 
 %% CONSTANTS
 e = 1.602e-19; % coulombs
-kb = physconst('Boltzmann'); % J/K
+kb = 1.380e-23; % J/K
 hbar = 6.626e-34 / (2*pi); % Js
 
 %% TERM 1
