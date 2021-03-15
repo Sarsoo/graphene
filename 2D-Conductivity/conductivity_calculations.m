@@ -23,24 +23,14 @@ if DISPLAY_HZ % divide radians back to hertz
 end
 
 figure(1);
+hold on;
 %plot(x_vals, real(cond));
 semilogx(x_vals, real(cond));
-
-grid();
-title('2D Sheet Real Conductivity');
-ylabel('Conductivity (S/m)');
-if DISPLAY_HZ
-    xlabel('Frequency (Hz)');
-else
-    xlabel('Frequency (rads-1)');
-end
-
-figure(2);
-%plot(x_vals, imag(cond));
 semilogx(x_vals, imag(cond));
 
-grid();
-title('2D Sheet Imaginary Conductivity');
+legend('Real', 'Imaginary');
+grid;
+title('2D Sheet Conductivity');
 ylabel('Conductivity (S/m)');
 if DISPLAY_HZ
     xlabel('Frequency (Hz)');
