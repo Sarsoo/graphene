@@ -15,7 +15,7 @@ x_vals = x_vals .* (2*pi); % rads-1
 cond = [];
 for x=x_vals
     % omega (rads-1), fermi_level (J), temp (K), scatter_lifetime (s-1)
-    cond = [cond sheet_conductivity(x, ev_to_j(3), 300, 5e-12)];
+    cond = [cond sheet_conductivity(x, fermi_from_carrier_density(7e7, ev_to_j(2.8)), 3000, 5e-12)];
 end
 
 if DISPLAY_HZ % divide radians back to hertz

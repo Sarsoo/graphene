@@ -13,18 +13,24 @@ F_TOTAL = 50;
 MAX_Y = 30; % carriers
 Y_TOTAL = 50;
 
+t = 2.8; % eV
+
 f_vals = logspace(MIN_F, MAX_F, F_TOTAL); % hz
 f_vals = f_vals .* (2*pi); % rads-1
 
-y_vals = logspace(0, MAX_Y, Y_TOTAL); % ev
-%y_vals = -MAX_Y:2*MAX_Y/Y_TOTAL:MAX_Y; % ev
-%y_vals = y_vals + 273.15;
+carrier_vals = logspace(0, MAX_Y, Y_TOTAL); % m-2
+%carrier_vals = carrier_vals + 273.15;
 
-cond = zeros(length(f_vals), length(y_vals));
+fermi_vals = zeros(1, length(carrier_vals));
+for carr=1:length(carrier_vals)
+    fermi_vals(carr) = fermi_from_carrier_density(carrier_vals(carr), ev_to_j(t));
+end
+
+cond = zeros(length(f_vals), length(fermi_vals));
 for freq=1:length(f_vals)
-    for y=1:length(y_vals)
-        % omega (rads-1), fermi_level (J), temp (K), scatter_lifetime (s-1)
-        cond(freq, y) = sheet_conductivity(f_vals(freq), fermi_from_carrier_density(y_vals(y)), 300, 5e-15);
+    for y=1:length(fermi_vals)
+        % omega (rads-1), fermi_level (eV), temp (K), scatter_lifetime (s-1)
+        cond(freq, y) = sheet_conductivity(f_vals(freq), fermi_vals(y), 300, 5e-12);
     end
 end
 
@@ -33,7 +39,7 @@ if DISPLAY_HZ % divide radians back to hertz
 end
 
 figure(1)
-surf(f_vals, y_vals, transpose(real(cond)));
+surf(f_vals, carrier_vals, transpose(real(cond)));
 h = gca;
 rotate3d on
 grid;
@@ -50,7 +56,7 @@ else
 end
 
 figure(2)
-surf(f_vals, y_vals, transpose(imag(cond)));
+surf(f_vals, carrier_vals, transpose(imag(cond)));
 h = gca;
 rotate3d on
 grid;
