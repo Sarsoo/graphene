@@ -6,7 +6,7 @@ e = 1.602e-19; % coulombs
 kb = 1.380e-23; % J/K
 hbar = 6.626e-34 / (2*pi); % Js
 
-%% TERM 1
+%% TERM 1 - INTRABRAND
 term1_coeff = (2i*(e^2)*kb*temp) ...
                     / ...
                 (pi*hbar^2*(omega + (1i/scatter_lifetime)));
@@ -14,7 +14,9 @@ term1 = log(2*cosh(fermi_level ...
                     / ...
                 (2*kb*temp)));
 
-%% TERM 2
+intraband = term1_coeff*term1;
+                
+%% TERM 2 - INTERBAND
 term2_coeff = (e^2) ...
                 / ...
             (4*hbar);
@@ -30,8 +32,10 @@ term_2_term_3 = (1i/2*pi) * ...
                     / ...
                 ((hbar*omega - 2*fermi_level)^2 + 4*((kb*temp)^2)));
 
+interband = term2_coeff*(term_2_term_1 + term_2_term_2 - term_2_term_3);
+
 %% OUTPUT
-conductivity = term1_coeff*term1 + term2_coeff*(term_2_term_1 + term_2_term_2 - term_2_term_3);
+conductivity = [intraband interband]; % return separately for display or summing
 
 end
 

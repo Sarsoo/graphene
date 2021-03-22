@@ -2,31 +2,58 @@
 %%
 %% calculate and present 2D sheet conductivty for graphene
 
-close all;clear all; clc;
+close all; clear all; clc;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%    FLAGS & OPTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 DISPLAY_HZ = true;
 MIN_F = 9;
 MAX_F = 15;
 F_TOTAL = 1e2;
 
+%EXCITATION_TYPE = 'intra';
+EXCITATION_TYPE = 'inter';
+%EXCITATION_TYPE = 'all';
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     CALCULATE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 x_vals = logspace(MIN_F, MAX_F, F_TOTAL); % hz
 x_vals = x_vals .* (2*pi); % rads-1
 
-cond = [];
-for x=x_vals
-    % omega (rads-1), fermi_level (J), temp (K), scatter_lifetime (s-1)
-    cond = [cond sheet_conductivity(x, fermi_from_carrier_density(7e7, ev_to_j(2.8)), 3000, 5e-12)];
+% CALCULATE SHEET CONDUCTIVITY
+cond = zeros(length(x_vals), 2);
+for x=1:length(x_vals)
+    cond(x, :) = sheet_conductivity(x_vals(x), % omega (rads-1)
+                                    fermi_from_carrier_density(2.2e17, ev_to_j(2.8)), % fermi_level (J)
+                                    300, % temp (K)
+                                    0.135e-12); % scatter_lifetime (s-1)
 end
 
 if DISPLAY_HZ % divide radians back to hertz
     x_vals = x_vals ./ (2*pi);
 end
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%       RENDER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 figure(1);
 hold on;
 %plot(x_vals, real(cond));
-semilogx(x_vals, real(cond));
-semilogx(x_vals, imag(cond));
+if EXCITATION_TYPE == 'intra'
+    semilogx(x_vals, real(cond(:, 1)));
+    semilogx(x_vals, imag(cond(:, 1)));
+elseif EXCITATION_TYPE == 'inter'
+    semilogx(x_vals, real(cond(:, 2)));
+    semilogx(x_vals, imag(cond(:, 2)));
+else
+    semilogx(x_vals, real(sum(cond, 2)));
+    semilogx(x_vals, imag(sum(cond, 2)));
+end
 
 legend('Real', 'Imaginary');
 grid;

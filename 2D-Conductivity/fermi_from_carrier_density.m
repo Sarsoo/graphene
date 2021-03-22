@@ -1,4 +1,4 @@
-function fermi = fermi_from_carrier_density(carrier_density, energy_scale), % cm-2, J
+function fermi = fermi_from_carrier_density(carrier_density, energy_scale), % m-2, J
 
 if carrier_density > 0
     sf = 1;
