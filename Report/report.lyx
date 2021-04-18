@@ -234,7 +234,7 @@ LatexCommand lstlistoflistings
 \end_layout
 
 \begin_layout Right Footer
-6420013
+EEEM022 Coursework
 \end_layout
 
 \begin_layout Left Footer
@@ -242,7 +242,7 @@ April 2021
 \end_layout
 
 \begin_layout Left Header
-EEEM022 Coursework
+6420013
 \end_layout
 
 \begin_layout Standard
@@ -342,10 +342,97 @@ lstparams "caption={Calculation function for 2D sheet conductivity},label={calcu
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../2D-Conductivity/conductivity_calculations.m"
 lstparams "caption={Script for calculating conductivity over a range of frequencies},label={sheet_calculation_script}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/conductivity_calc_surface.m"
+lstparams "caption={Script for calculating conductivity over a range of frequencies and presenting as a surface},label={sheet_calculation_script_surface}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/carrier_density_from_fermi.m"
+lstparams "caption={Derive the carrier density for a given Fermi energy},label={carrier_density_from_fermi}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/fermi_from_carrier_density.m"
+lstparams "caption={Derive the Fermi energy for a given carrier density},label={fermi_from_carrier_density}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/fermi_velocity.m"
+lstparams "caption={Derive the Fermi velocity for a given energy scale},label={fermi_velocity}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/ev_to_j.m"
+lstparams "caption={Convert electron-volts to joules},label={ev_to_j}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/j_to_ev.m"
+lstparams "caption={Convert joules to electron-volts},label={j_to_ev}"
 
 \end_inset
 
