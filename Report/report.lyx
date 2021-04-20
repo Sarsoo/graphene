@@ -21,7 +21,7 @@ minimalistic
 todonotes
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language british
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -97,7 +97,7 @@ todonotes
 \defskip medskip
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style british
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -117,7 +117,7 @@ todonotes
 \begin_layout Title
 
 \size giant
-Graphene Investigations & Conductivity Modelling
+Graphene Applications & Conductivity Modelling At High Frequencies
 \end_layout
 
 \begin_layout Author
@@ -272,16 +272,776 @@ setcounter{page}{1}
 Introduction
 \end_layout
 
+\begin_layout Standard
+Graphene is a 2D allotrope of carbon with 
+\end_layout
+
+\begin_layout Standard
+This work explores the suitability of graphene for high frequency applications.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Applications"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents two applications of graphene that take advantage of it's behaviour
+ at high frequencies.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Sheet-Conductivity-Modelling"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents an investigation into the 2D sheet conductivity of the material.
+\end_layout
+
 \begin_layout Section
-Graphene Applications
+Applications
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Applications"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Sheet Conductivity Modelling
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Sheet-Conductivity-Modelling"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This section presents a model for graphene's high frequency conductivity
+ using the equation below below 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yao"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+\sigma_{s}\left(\omega\right)=\frac{2ie^{2}k_{B}T}{\pi\hbar^{2}\left(\omega+\nicefrac{i}{\tau}\right)}\ln\left(2\cosh\left(\frac{E_{F}}{2k_{B}T}\right)\right)\\
++\frac{e^{2}}{4\hbar}\left(\frac{1}{2}+\frac{1}{\pi}\tan^{-1}\left(\frac{\hbar\omega-2E_{F}}{2k_{B}T}\right)-\frac{i}{2\pi}\ln\left(\frac{\left(\hbar\omega+2E_{F}\right)^{2}}{\left(\hbar\omega-2E_{F}\right)^{2}+4\left(k_{B}T\right)^{2}}\right)\right)\label{eq:2d-conductivity}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking this equation, the first term accounts for the intraband transitions
+ while the latter term refers to the interband transitions
+\begin_inset CommandInset citation
+LatexCommand cite
+key "david-paper"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Flex TODO Note (Margin)
+status open
+
+\begin_layout Plain Layout
+cite
+\end_layout
+
+\end_inset
+
+.
+ These two contributions are separated for reference below,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{s}^{intra}\left(\omega\right)=\frac{2ie^{2}k_{B}T}{\pi\hbar^{2}\left(\omega+\nicefrac{i}{\tau}\right)}\ln\left(2\cosh\left(\frac{E_{F}}{2k_{B}T}\right)\right)\label{eq:intra-conductivity}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{s}^{inter}\left(\omega\right)=\frac{e^{2}}{4\hbar}\left(\frac{1}{2}+\frac{1}{\pi}\tan^{-1}\left(\frac{\hbar\omega-2E_{F}}{2k_{B}T}\right)-\frac{i}{2\pi}\ln\left(\frac{\left(\hbar\omega+2E_{F}\right)^{2}}{\left(\hbar\omega-2E_{F}\right)^{2}+4\left(k_{B}T\right)^{2}}\right)\right)\label{eq:inter-conductivity}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2d-conductivity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ was implemented in MatLab, see listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "calculation_function"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, such that the inter and intraband contributions were returned separately.
+ This allowed for displaying both aspects independently or together by summing.
+ From the function it can be seen that the variables are AC frequency, 
+\begin_inset Formula $\omega$
+\end_inset
+
+, the Fermi energy level, 
+\begin_inset Formula $E_{F}$
+\end_inset
+
+, the temperature, 
+\begin_inset Formula $T$
+\end_inset
+
+, and the scatter lifetime, 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ These were varied within reasonable ranges in order to investigate how
+ such variations affect the conductivity, both as a whole and individually.
+ 
 \end_layout
 
 \begin_layout Subsection
 Results
+\end_layout
+
+\begin_layout Standard
+To validate the model, values for TTF and CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ doping taken from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "david-paper"
+literal "false"
+
+\end_inset
+
+ (see table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:david-values"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) were simulated and can be seen presented in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-simulation-conductivity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Similarly to the original, the real component can be seen to begin between
+ 40 and 70 mS before declining to around 0.5 
+\begin_inset Formula $\mu S$
+\end_inset
+
+.
+ This decline occurs between 20 GHz and 2 THz.
+ The imaginary component peaks over the same frequency band that the real
+ component declines and the two intersect at around 150 GHz with a conductance
+ of 31 mS with CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ and 24 mS for TTF.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dopant
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Carrier Concentration (cm
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fermi Level (eV)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TTF
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3 x 10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.41
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2 x 10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.53
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+With Fermi velocity energy scale, 
+\begin_inset Formula $t$
+\end_inset
+
+ = 3 eV 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Carrier concentration values for dopants from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "david-paper"
+literal "false"
+
+\end_inset
+
+ and the Fermi levels derived from the model, see figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fermi-concentration-func"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:david-values"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/david-recreation.png
+	lyxscale 20
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Complex conductivity for TTF and CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ doping at 300 K with a scatter lifetime of 1 ps 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "david-paper"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:david-simulation-conductivity"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Fermi level used to calculate conductance (listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "calculation_function"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) was derived from the net carrier concentration as a result of doping,
+ see listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fermi_from_carrier_density"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The non-linear function can be seen modelled in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fermi-concentration-func"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/fermi-conc.png
+	lyxscale 20
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fermi level associated with different carrier concentrations
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fermi-concentration-func"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Carrier Density
+\end_layout
+
+\begin_layout Standard
+The general trends for how the dopant-influenced net carrier concentration
+ influences conductivity can be seen in the surfaces of figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:surf-carrier-concentration"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/carrier-density/real-com-carrier-surf-sl5e-12-T300-logCB.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/carrier-density/im-com-carrier-surf-sl5e-12-T300-logCB.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Complex conductivity over frequency for different carrier densities
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:surf-carrier-concentration"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Temperature
+\end_layout
+
+\begin_layout Standard
+Values from 0 to the breakdown temperature of graphene, 2230 K
+\begin_inset CommandInset citation
+LatexCommand cite
+key "graphene-high-temp"
+literal "false"
+
+\end_inset
+
+, were varied in order to investigate the effect on conductance.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/temperature/real-com-temp-surf-sl5e-12-TTF.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/temperature/im-com-temp-surf-sl5e-12-TTF.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Complex conductivity over frequency for different temperatures
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Scattering Lifetime
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/scatter-lifetime/real-com-SL-surf-300K-TTF10,14.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/scatter-lifetime/im-com-SL-surf-300K-TTF10,14.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Complex conductivity over frequency for different scattering lifetimes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Discussion
 \end_layout
 
 \begin_layout Section
