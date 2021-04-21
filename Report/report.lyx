@@ -484,13 +484,22 @@ noprefix "false"
 \end_inset
 
 .
- Similarly to the original, the real component can be seen to begin between
- 40 and 70 mS before declining to around 0.5 
+ Similarly to the original, the real component can be seen to be between
+ 48 and 63 mS for TTF and CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ respectively with both having a cutoff frequency of around 20 GHz.
+ Beyond the cutoff frequency the value is around 60 
 \begin_inset Formula $\mu S$
 \end_inset
 
-.
- This decline occurs between 20 GHz and 2 THz.
+ by 5 THz.
  The imaginary component peaks over the same frequency band that the real
  component declines and the two intersect at around 150 GHz with a conductance
  of 31 mS with CoCp
@@ -503,6 +512,8 @@ noprefix "false"
 \end_inset
 
  and 24 mS for TTF.
+ Beyond 100 THz, the imaginary component dips below zero, with a trough
+ of -0.5 mS around 250 THz.
 \end_layout
 
 \begin_layout Standard
@@ -572,13 +583,7 @@ TTF
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.3 x 10
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-13
-\end_layout
-
+\begin_inset Formula $1.3\times10^{13}$
 \end_inset
 
 
@@ -619,13 +624,7 @@ CoCp
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.2 x 10
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-13
-\end_layout
-
+\begin_inset Formula $2.2\times10^{13}$
 \end_inset
 
 
@@ -711,13 +710,13 @@ name "tab:david-values"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../Resources/david-recreation.png
+	filename ../Resources/david-recreation-mag.png
 	lyxscale 20
 	width 60col%
 
@@ -751,6 +750,111 @@ literal "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:david-simulation-conductivity"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two contributions to this complex conductance, intraband and interband,
+ can be seen individually in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-simulation-inter-intra"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Comparing the two, it can be seen that the interactions happen over largely
+ separate frequency ranges.
+ The interband interactions begin after the 10 THz range, initially the
+ imaginary component sharply drops and relaxes with a minima at 187 THz
+ and 248 THz for TTF and CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+.
+ As the imaginary component minimises, the real component begins sharply
+ rising over a 100 THz range to a maximum of 60 
+\begin_inset Formula $\mu S$
+\end_inset
+
+.
+ This continues throughout the hundreds of terahertz range and beyond the
+ region of interest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/david-recreation-intra-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../Resources/david-recreation-inter-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Intraband and interband conductivity for TTF and CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ doping at 300 K with a scatter lifetime of 1 ps 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "david-paper"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:david-simulation-inter-intra"
 
 \end_inset
 
@@ -863,6 +967,173 @@ noprefix "false"
 \end_inset
 
 .
+ To select a suitable range to visualise, the values from table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:david-values"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fermi-concentration-func"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ were considered.
+ Realistic dopant carrier concentrations can be seen to of the order of
+ 
+\begin_inset Formula $1\times10^{13}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ cm
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+ or 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $1\times10^{17}$
+\end_inset
+
+ m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+.
+ For the simulation, values up to 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $1\times10^{18}$
+\end_inset
+
+ m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+ for a Fermi level of 1.13 eV were chosen.
 \end_layout
 
 \begin_layout Standard
@@ -901,7 +1172,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Complex conductivity over frequency for different carrier densities
+Complex conductivity over frequency for different carrier densities.
+ Room temperature with a scatter lifetime of 
+\begin_inset Formula $5\times10^{-12}$
+\end_inset
+
+ s and a Fermi velocity energy scale of 2.8 eV
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:surf-carrier-concentration"
@@ -921,12 +1197,830 @@ name "fig:surf-carrier-concentration"
 
 \end_layout
 
+\begin_layout Standard
+The conductance can broadly be seen to follow the same spectral profile
+ over the range of carrier concentrations as can be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-simulation-conductivity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Variation comes in the magnitude of the various regions.
+ For both the real and imaginary component, the max value (pre-cutoff for
+ the real component and the peak of the imaginary component) can be seen
+ to be constant over net carrier concentrations up until around 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+15
+\end_layout
+
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+, 21 mS for the real component and 11 mS for the imaginary.
+ Beyond
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+a net carrier concentration of 10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+15
+\end_layout
+
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+ the maximum values begin to rapidly increase and by 10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+17
+\end_layout
+
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+ they have increased by an order of magnitude to hundreds of milli-siemens.
+\end_layout
+
+\begin_layout Standard
+For the real conductance component, beyond this previously mentioned 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+15
+\end_layout
+
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+ threshold, the cutoff frequency begins to increase as can be seen from
+ higher peak smearing the lighter blue across a higher frequency band.
+ This moves the cutoff from around 120 GHz to about 180 GHz.
+ The value that the real conductance takes above the cutoff frequency decreases
+ past the 10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+15
+\end_layout
+
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+carrier concentration threshold, from 58
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ to 2 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ at 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $1\times10^{17}$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+.
+ For the imaginary component, at low carrier concentrations the peak value
+ decreases to around 1 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\mu S$
+\end_inset
+
+ by 500 THz.
+ As the carrier concentration decreases beyond 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $1\times10^{12}$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+ this value decreases into the small negative values that can be seen in
+ figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-simulation-conductivity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the frequency at which the drop occurs lowers and the steeper colour gradient
+ indicates that the change happens faster.
+ The earliest frequency that this occurs at is around 10 THz and 
+\begin_inset Formula $1\times10^{15}$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+.
+ Finally, as the carrier concentration further increases and the 120 GHz
+ peak increases in magnitude, the frequency for this high frequency conductance
+ drop begins to increase again.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/carrier-density/intraband-lines-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../Resources/carrier-density/interband-lines-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inter- and intraband conductance for high and low carrier concentration
+ graphene species
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:inter-intra-carrier-conc"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:inter-intra-carrier-conc"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the conductance for three graphene species of differing carrier
+ concentrations decomposed into the intraband and interband components.
+ From comparing the relative magnitudes from the two, it is clear that the
+ majority contribution for conductance throughout the selected frequency
+ range is from the intraband transitions.
+ This is also apparent from the similarity in spectral profile between the
+ intraband conductivity and both the surfaces of figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:surf-carrier-concentration"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the reproduced results of figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-simulation-conductivity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In general, the intraband conductivity can be seen to exist up to the THz
+ portion of the spectrum while the interband has the majority of it's contributi
+ons above the THz range.
+ The interband conductance can be seen to be responsible for the previously
+ noted negative imaginary conductance behaviour seen in the surface of figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:surf-carrier-concentration"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Low carrier concentration result in a higher initial imaginary component
+ that does not lower into negative values.
+ As concentration increases, the imaginary component decreases more forming
+ a sharp trough that also bottoms out at a higher frequency.
+\end_layout
+
+\begin_layout Standard
+Alongside this imaginary decrease, the real component can be seen to increase
+ from a value between 1 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ and 30 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ depending on carrier concentration to the limit of 60 
+\begin_inset Formula $\mu S$
+\end_inset
+
+.
+ Although the differing species reach this same limit, their approach is
+ different.
+ The lower carrier concentration species begins at the higher 30 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ value and decreases only slightly to the limit over a wider spectral range.
+ The higher carrier concentration species begins much lower at 1 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ before increasing to 60 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ in what is closer to a step action at the higher frequency of 110 THz.
+\end_layout
+
 \begin_layout Subsubsection
 Temperature
 \end_layout
 
 \begin_layout Standard
-Values from 0 to the breakdown temperature of graphene, 2230 K
+Values from 0 K to the breakdown temperature of graphene, 2230 K 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "graphene-high-temp"
@@ -934,8 +2028,21 @@ literal "false"
 
 \end_inset
 
-, were varied in order to investigate the effect on conductance.
- 
+, were simulated in order to investigate the effect on conductance.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:surf-temperature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows a surface of the conductance spectrum over the prescribed temperature
+ range.
+ In general, temperature can be seen to have little effect on conductance,
+ both real and imaginary.
 \end_layout
 
 \begin_layout Standard
@@ -975,6 +2082,65 @@ status open
 
 \begin_layout Plain Layout
 Complex conductivity over frequency for different temperatures
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:surf-temperature"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/temperature/intraband-lines-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../Resources/temperature/interband-lines-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inter- and intraband conductance for low, room and high temperature graphene
+ using TTF doping
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:inter-intra-temperature"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1028,6 +2194,65 @@ status open
 
 \begin_layout Plain Layout
 Complex conductivity over frequency for different scattering lifetimes
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:surf-scatter-lifetime"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../Resources/scatter-lifetime/intraband-lines-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../Resources/scatter-lifetime/interband-lines-mag.png
+	lyxscale 20
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inter- and intraband conductance with 3 different scattering times for graphene
+ using TTF doping
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:inter-intra-scatter-lifetime"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1124,6 +2349,17 @@ lstparams "caption={Script for calculating conductivity over a range of frequenc
 LatexCommand lstinputlisting
 filename "../2D-Conductivity/conductivity_calc_surface.m"
 lstparams "caption={Script for calculating conductivity over a range of frequencies and presenting as a surface},label={sheet_calculation_script_surface}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/fermi_conc.m"
+lstparams "caption={Script for plotting net carrier concentrations against Fermi level},label={fermi_concentration_script}"
 
 \end_inset
 
