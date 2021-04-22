@@ -314,6 +314,18 @@ name "sec:Applications"
 
 \end_layout
 
+\begin_layout Subsection
+Graphene Transistors
+\end_layout
+
+\begin_layout Subsection
+Terahertz Radiation
+\end_layout
+
+\begin_layout Subsection
+Summary
+\end_layout
+
 \begin_layout Section
 Sheet Conductivity Modelling
 \begin_inset CommandInset label
@@ -781,6 +793,11 @@ noprefix "false"
 .
  Comparing the two, it can be seen that the interactions happen over largely
  separate frequency ranges.
+ In general, the intraband conductivity can be seen to exist up to the THz
+ portion of the spectrum while the interband has the majority of it's contributi
+ons above the THz range.
+ The intraband can be seen to dominate the total contribution and is responsible
+ for the conductance up to the previously mentioned 20 GHz cutoff.
  The interband interactions begin after the 10 THz range, initially the
  imaginary component sharply drops and relaxes with a minima at 187 THz
  and 248 THz for TTF and CoCp
@@ -1551,8 +1568,9 @@ m
 \end_inset
 
  threshold, the cutoff frequency begins to increase as can be seen from
- higher peak smearing the lighter blue across a higher frequency band.
- This moves the cutoff from around 120 GHz to about 180 GHz.
+ the higher 20 GHz peak smearing the lighter blue across a higher frequency
+ band.
+ This moves the cutoff from 120 GHz to around 180 GHz.
  The value that the real conductance takes above the cutoff frequency decreases
  past the 10
 \begin_inset script superscript
@@ -1624,7 +1642,7 @@ m
 
 \end_inset
 
-carrier concentration threshold, from 58
+ carrier concentration threshold, from 58
 \family default
 \series default
 \shape default
@@ -1935,37 +1953,103 @@ noprefix "false"
 
  presents the conductance for three graphene species of differing carrier
  concentrations decomposed into the intraband and interband components.
- From comparing the relative magnitudes from the two, it is clear that the
- majority contribution for conductance throughout the selected frequency
- range is from the intraband transitions.
- This is also apparent from the similarity in spectral profile between the
- intraband conductivity and both the surfaces of figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:surf-carrier-concentration"
-plural "false"
-caps "false"
-noprefix "false"
-
+ The blue series, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+a carrier density of 
+\begin_inset Formula $1.3\times10^{17}$
 \end_inset
 
- and the reproduced results of figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:david-simulation-conductivity"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- In general, the intraband conductivity can be seen to exist up to the THz
- portion of the spectrum while the interband has the majority of it's contributi
-ons above the THz range.
- The interband conductance can be seen to be responsible for the previously
- noted negative imaginary conductance behaviour seen in the surface of figure
  
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, recreates TTF doping from figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-simulation-inter-intra"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with two further theoretical species of lower dopant concentration.
+\end_layout
+
+\begin_layout Standard
+Looking to the intraband interactions, the real and imaginary components
+ can be seen to have the same profile as seen previously, the differences
+ lie in magnitude.
+ Higher net carrier concentrations can be seen to increase the magnitude,
+ looking back to figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:surf-carrier-concentration"
@@ -1975,11 +2059,16 @@ noprefix "false"
 
 \end_inset
 
-.
- Low carrier concentration result in a higher initial imaginary component
- that does not lower into negative values.
- As concentration increases, the imaginary component decreases more forming
- a sharp trough that also bottoms out at a higher frequency.
+, this relationship is non-linear.
+\end_layout
+
+\begin_layout Standard
+The interband conductance can be seen to show more variation over the prescribed
+ carrier concentration range.
+ Low carrier concentrations result in a higher initial imaginary component
+ that does not descend into negative values.
+ As concentration increases, the imaginary component decreases more, forming
+ a sharp trough that also reaches its lowest value at a higher frequency.
 \end_layout
 
 \begin_layout Standard
@@ -2003,7 +2092,7 @@ Alongside this imaginary decrease, the real component can be seen to increase
 \begin_inset Formula $\mu S$
 \end_inset
 
- value and decreases only slightly to the limit over a wider spectral range.
+ value and increases only slightly to the limit over a wider spectral range.
  The higher carrier concentration species begins much lower at 1 
 \begin_inset Formula $\mu S$
 \end_inset
@@ -2046,10 +2135,25 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+From the real component, the pre-cutoff peak can be seen to increase from
+ 224 mS to 253 mS when moving from near-room temperature to the breakdown
+ temperature of graphene.
+\end_layout
+
+\begin_layout Standard
+Looking to the imaginary component, the peak conductance increases by roughly
+ 15 mS.
+ More variation occurs at the higher frequency, interband conductivity.
+ The sharper colour gradient at lower temperatures become more gradual at
+ higher temperatures, this indicates that the intraband imaginary negative
+ peak takes place over a more gradual spectral range.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -2099,6 +2203,30 @@ name "fig:surf-temperature"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:inter-intra-temperature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the decomposed intraband and interband conductivity contributions,
+ the previously mentioned high frequency behaviour can be seen clearer.
+ As the temperature increases, the negative imaginary peak gets smaller
+ in value with a smoother gradient.
+ For the real component, althought the final value does not change, the
+ gradient with which it is aproached changes.
+ At low temperatures, the increase takes place over a tight spectral range
+ with a sharp step action.
+ As the temperature increases, the spectral band over which the transition
+ occurs broadens with a smoother gradient while maintaining the centre frequency
+ of 200 THz.
 \end_layout
 
 \begin_layout Standard
@@ -2158,10 +2286,67 @@ Scattering Lifetime
 \end_layout
 
 \begin_layout Standard
+This section explores the effect of varying scatter lifetime, 
+\begin_inset Formula $\tau$
+\end_inset
+
+, on the conductance.
+ For the range of values to use, existing data was considered.
+ 1 ps is a typical figure in literature 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "david-paper"
+literal "false"
+
+\end_inset
+
+, with this in mind values between 100 ps and 0.01 ps were simulated.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:surf-scatter-lifetime"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ explores the general trends throughout the prescribed range.
+ 
+\end_layout
+
+\begin_layout Standard
+Looking to the real component, the scatter lifetime can be seen to affect
+ both the cutoff frequency and the magnitude of the pre-cutoff value.
+ As the lifetime increases, the cutoff frequency occurs at a lower value,
+ from 
+\begin_inset Flex TODO Note (Margin)
+status open
+
+\begin_layout Plain Layout
+values
+\end_layout
+
+\end_inset
+
+.
+ The magnitude of the conductance also increases exponentially as the lifetime
+ is increased.
+\end_layout
+
+\begin_layout Standard
+Considering the imaginary component, a somewhat similar behaviour can be
+ seen.
+ The same exponential growth in magnitude can be seen in the 20 GHz peak.
+ With regards to the spectral behaviour, increasing scatter lifetime reduces
+ the frequency of the leading peak, broadening the range of the peak.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -2211,6 +2396,25 @@ name "fig:surf-scatter-lifetime"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:inter-intra-scatter-lifetime"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the interband and intraband conductivity contributions for three
+ different scattering lifetimes.
+ The previously identified spectral changes and magnitude growth can be
+ seen in the intraband conductivity.
+ Looking to the interband contributions, the three series show no variation,
+ the scatter lifetime has no effect.
 \end_layout
 
 \begin_layout Standard
