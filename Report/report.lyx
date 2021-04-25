@@ -273,7 +273,9 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Graphene is a 2D allotrope of carbon with 
+Graphene is a 2D allotrope of carbon with highly interesting mechanical
+ and electrical properties that have made it a target of significant research
+ in the last two decades since it's experimental discovery in 2004.
 \end_layout
 
 \begin_layout Standard
@@ -288,8 +290,8 @@ noprefix "false"
 
 \end_inset
 
- presents two applications of graphene that take advantage of it's behaviour
- at high frequencies.
+ presents two applications of graphene that take advantage of it's electrical
+ and mechanical behaviour at high frequencies.
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -314,8 +316,257 @@ name "sec:Applications"
 
 \end_layout
 
+\begin_layout Standard
+This section explores two uses of graphene for high frequency applications.
+ First, the applicability of graphene for field effect transisitors will
+ be considered as a channel material.
+ Throughout, a particular focus will be paid to use in digital logic and
+ thus as a possible replacement for the current Silicon CMOS/MOSFET paradigm.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+second application
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Graphene Transistors
+Digital Logic
+\end_layout
+
+\begin_layout Standard
+Silicon-based CMOS/MOSFET digital logic is the basis on which much of the
+ modern electronics landscape has been built.
+ From intergrated logic circuits to CPUs, it is hard to overstate how important
+ this technology has proven to be.
+ The need for more powerful devices has increased pressure for smaller and
+ more efficient transistors, such that more can fit into a single device.
+ This progress is typically described by Moore's Law and can be seen graphically
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cpu-transistor-number"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename moores-law-owid.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The number of transistors in commercial CPUs between 1970 and 2020 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "owidtechnologicalprogress"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cpu-transistor-number"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, as transistors are made smaller, theoretical limits for many limiting
+ factors are approached.
+ In 2015, the ITRS predicted that by 2021 the current push for smaller transisto
+rs would no longer be economically viable, instead requiring innovative
+ 3D device structures
+\begin_inset CommandInset citation
+LatexCommand cite
+key "transistors-21"
+literal "false"
+
+\end_inset
+
+.
+ Some of the most important limiting factors in the current Silicon landscape
+ are short-channel effects, a group of undesirable electrical properties
+ that can occur when the channel length of a MOSFET device is of the same
+ order of magnitude as the depletion layer
+\begin_inset Flex TODO Note (Margin)
+status open
+
+\begin_layout Plain Layout
+cite
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Limitations of silicon
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Terahertz switching
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Electron mobility
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Thermal conductivity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Sensitivity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+2D channel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Short channel effects
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Hard to turn off, low on-off I multiplier (bandgap stuff)
+\end_layout
+
+\begin_layout Plain Layout
+Need to introduce a bandgap which decimates mobility
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Hard to fabricate, delamination and stuff
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -498,8 +749,17 @@ noprefix "false"
 \end_inset
 
 .
- Similarly to the original, the magnitude of the function can be seen to
- be between 48 and 63 mS for TTF and CoCp
+ Similarly to the original, the magnitude (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-magnitude"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) of the function can be seen to be between 48 and 63 mS for TTF and CoCp
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -527,10 +787,20 @@ noprefix "false"
  the magnitude tends closer to the imaginary component than the real.
  Beyond 100 THz, the imaginary component dips below zero, with a trough
  of -0.5 mS around 250 THz.
- Looking to the phase information, before 10 GHz the phase can be seen to
- be 0, however as the imaginary component begins to peak, the phase increases
- to a max of 90 degrees, continuing until 100 THz where the negative imaginary
- peak causes the phase to sharply drop to -90 degrees.
+ Looking to the phase information (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-phase"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), before 10 GHz the phase can be seen to be 0, however as the imaginary
+ component begins to peak, the phase increases to a max of 90 degrees, continuin
+g until 100 THz where the negative imaginary peak causes the phase to sharply
+ drop to -90 degrees.
  There is little difference between the two dopants, they are equal until
  100 THz where the TTF shows a -100 THz offset from the CoCp
 \begin_inset script subscript
@@ -743,6 +1013,14 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/david-recreation-mag.png
 	lyxscale 20
@@ -751,6 +1029,37 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:david-magnitude"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/david-recreation-phase.png
 	lyxscale 20
@@ -765,7 +1074,30 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Complex conductivity magnitude and phase for TTF and CoCp
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:david-phase"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Complex conductivity magnitude (a) and phase (b) for TTF and CoCp
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -853,6 +1185,14 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/david-recreation-intra-mag.png
 	lyxscale 20
@@ -861,6 +1201,37 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:david-intraband"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/david-recreation-inter-mag.png
 	lyxscale 20
@@ -875,7 +1246,30 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Intraband and interband conductivity for TTF and CoCp
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:david-interband"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Intraband (a) and interband (b) conductivity for TTF and CoCp
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -1189,6 +1583,14 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/carrier-density/real-com-carrier-surf-sl5e-12-T300-logCB.png
 	lyxscale 20
@@ -1200,12 +1602,66 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:surf-carrier-conc-real"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
 	filename ../Resources/carrier-density/im-com-carrier-surf-sl5e-12-T300-logCB.png
 	lyxscale 20
 	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:surf-carrier-conc-im"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1259,7 +1715,7 @@ The conductivity can broadly be seen to follow the same spectral profile
  over the range of carrier concentrations as can be seen in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:david-simulation-conductivity"
+reference "fig:david-magnitude"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1857,7 +2313,7 @@ m
  figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:david-simulation-conductivity"
+reference "fig:david-magnitude"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1933,6 +2389,14 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/carrier-density/intraband-lines-mag.png
 	lyxscale 20
@@ -1941,6 +2405,37 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:carrier-conc-intra"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/carrier-density/interband-lines-mag.png
 	lyxscale 20
@@ -1955,8 +2450,31 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Inter- and intraband conductivity for high and low carrier concentration
- graphene species
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:carrier-conc-inter"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Intraband (a) and interband (b) conductivity for high and low carrier concentrat
+ion graphene species
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:inter-intra-carrier-conc"
@@ -2443,6 +2961,14 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/temperature/intraband-lines-mag.png
 	lyxscale 20
@@ -2451,6 +2977,37 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:temp-intra"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/temperature/interband-lines-mag.png
 	lyxscale 20
@@ -2465,8 +3022,31 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Inter- and intraband conductivity for low, room and high temperature graphene
- using TTF doping
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:temp-inter"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Intraband (a) and interband (b) conductivity for low, room and high temperature
+ graphene using TTF doping
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:inter-intra-temperature"
@@ -2623,6 +3203,14 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/scatter-lifetime/real-com-SL-surf-300K-TTF10,14.png
 	lyxscale 20
@@ -2634,12 +3222,66 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:surf-scatter-intra"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
 	filename ../Resources/scatter-lifetime/im-com-SL-surf-300K-TTF10,14.png
 	lyxscale 20
 	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:surf-scatter-inter"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2713,6 +3355,14 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/scatter-lifetime/intraband-lines-mag.png
 	lyxscale 20
@@ -2721,6 +3371,37 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:scatter-intraband"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename ../Resources/scatter-lifetime/interband-lines-mag.png
 	lyxscale 20
@@ -2735,8 +3416,31 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Inter- and intraband conductivity with 3 different scattering times for
- graphene using TTF doping
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:scatter-inter"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Intraband (a) and interband (b) conductivity with 3 different scattering
+ times for graphene using TTF doping
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:inter-intra-scatter-lifetime"
@@ -3153,6 +3857,32 @@ From the presented trends for how conductivity is affected by a varied carrier
  A longer scatter lifetime was shown to increase the magnitude of gigahertz
  conductivity, this can be justified by considering the meaning of the scatter
  lifetime.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Equation analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Why?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
