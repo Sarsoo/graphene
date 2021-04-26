@@ -274,8 +274,139 @@ Introduction
 
 \begin_layout Standard
 Graphene is a 2D allotrope of carbon with highly interesting mechanical
- and electrical properties that have made it a target of significant research
- in the last two decades since it's experimental discovery in 2004.
+ and electrical properties that have made it a popular target of research
+ over the last two decades since it's experimental discovery in 2004 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "geim-04"
+literal "false"
+
+\end_inset
+
+.
+ Resembling a honeycomb structure, each carbon atoms bonds to three surrounding
+ atoms by overlapping 
+\begin_inset Formula $p$
+\end_inset
+
+ orbitals.
+ This leaves one remaining 
+\begin_inset Formula $\pi$
+\end_inset
+
+-electron whose orbital extends perpendicular to the 2D sheet.
+ This physical and electronic structure can be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:orbital-sketch"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ As a result, graphene has a 0 energy bandgap, the conduction and valence
+ band meet at a single point known as the Dirac point.
+ Both bands linearly extend away from the Dirac point, a highly unusual
+ result that allows electrons to act as massless Fermions and move with
+ extremely high mobility, as high as 200,000 cm
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+V
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+
+s
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+
+ at room temperature 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "graphene-review-2010"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename orbital-sketch.png
+	width 40col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A section of graphene sheet with the orientation of electron orbitals highlighte
+d 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "warda-gfet-review"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:orbital-sketch"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With these highly sought after properties, it is unsurprising that graphene
+ remains a prospective material for many domains including semiconductor
+ and high frequency applications.
 \end_layout
 
 \begin_layout Standard
@@ -318,7 +449,7 @@ name "sec:Applications"
 
 \begin_layout Standard
 This section explores two uses of graphene for high frequency applications.
- First, the applicability of graphene for field effect transisitors will
+ First, the applicability of graphene for field effect transistors will
  be considered as a channel material.
  Throughout, a particular focus will be paid to use in digital logic and
  thus as a possible replacement for the current Silicon CMOS/MOSFET paradigm.
@@ -345,7 +476,7 @@ Digital Logic
 \begin_layout Standard
 Silicon-based CMOS/MOSFET digital logic is the basis on which much of the
  modern electronics landscape has been built.
- From intergrated logic circuits to CPUs, it is hard to overstate how important
+ From integrated logic circuits to CPUs, it is hard to overstate how important
  this technology has proven to be.
  The need for more powerful devices has increased pressure for smaller and
  more efficient transistors, such that more can fit into a single device.
@@ -419,8 +550,8 @@ name "fig:cpu-transistor-number"
 \end_layout
 
 \begin_layout Standard
-However, as transistors are made smaller, theoretical limits for many limiting
- factors are approached.
+However, as transistors are made smaller, theoretical limits for many engineerin
+g challenges are approached.
  In 2015, the ITRS predicted that by 2021 the current push for smaller transisto
 rs would no longer be economically viable, instead requiring innovative
  3D device structures
@@ -440,7 +571,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-cite
+cite, reword?
 \end_layout
 
 \end_inset
@@ -449,11 +580,182 @@ cite
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
+As previously covered, a sheet of graphene or 
+\emph on
+large-area graphene
+\emph default
+ has no bandgap.
+ As such it is unable to turn off, making it unsuitable as a channel material
+ for a digital MOSFET.
+ Quantitatively, this can be measured with by the ratio of on current to
+ off current or the 
+\emph on
+on/off ratio
+\emph default
+.
+ Existing Silicon CMOS can expect an on/off ratio of at least the order
+ of 10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+, whereas monolayer graphene can only achieve around 5 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "warda-gfet-review"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Therefore, it is clear that in order to use graphene as a channel material
+ a bandgap must be formed.
+ There are a number of ways to do so, a selection of band diagrams for such
+ structures can be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:dirac-cones"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For digital applications, one of the most promising methods for creating
+ a band gap is by confining graphene in one dimension to create a 
+\emph on
+graphene nanoribbon
+\emph default
+ (GNR).
+ In doing so it has been shown that the produced bandgap is inversely proportion
+al to the width of this ribbon 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gnrfet-applications"
+literal "false"
+
+\end_inset
+
+.
+ An example structure for a graphene nanoribbon FET (GNRFET) can be seen
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gnrget-structure"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Limitations of silicon
+\noindent
+\align center
+\begin_inset Graphics
+	filename cones.png
+	width 40col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Energy band diagram for 4 different structures of graphene, i) large-area,
+ ii) nanoribbons, iii) unbiased bilayer, iv) bilayer with an applied perpendicul
+ar electric field 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "graphene-review-2010"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:dirac-cones"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename gnrfet.png
+	lyxscale 50
+	width 40col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graphene nanoribbon FET structure 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gnrfet-structure-image"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:gnrget-structure"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -466,7 +768,7 @@ Limitations of silicon
 status open
 
 \begin_layout Plain Layout
-Terahertz switching
+Advantages over silicon
 \end_layout
 
 \end_inset
@@ -475,98 +777,39 @@ Terahertz switching
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Electron mobility
-\end_layout
+Some of the limitations of GNR-based FETs include the difficulty in fabricating
+ high-quality graphene and specifically graphene nanoribbons.
+ On top of the typical issues in graphene fabrication including the requirements
+ for tight environmental control.
+ Edge roughness can significantly affect the channels properties, introducing
+ new scattering centres 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gnrfet-structure-image"
+literal "false"
 
 \end_inset
 
+.
+ However, the major constraint of GNRFETs is the limited mobility.
+ Although graphene has incredibly high carrier mobility, by opening the
+ bandgap as seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:dirac-cones"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+, curves are introduced to the band structure.
+ This increases the carrier's effective mass, significantly reducing mobility.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Thermal conductivity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Sensitivity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-2D channel
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Short channel effects
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Hard to turn off, low on-off I multiplier (bandgap stuff)
-\end_layout
-
-\begin_layout Plain Layout
-Need to introduce a bandgap which decimates mobility
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Hard to fabricate, delamination and stuff
-\end_layout
-
-\end_inset
-
-
+Despite these drawbacks, GNRFETs look to be one of the most promising avenues
+ for the post-Silicon, high-performance CMOS/MOSFET electronics.
 \end_layout
 
 \begin_layout Subsection
@@ -784,10 +1027,24 @@ noprefix "false"
  and 24 mS for TTF.
  After this intersection, the imaginary component can be seen to be the
  dominant term of the complex quantity, this can be seen in the graph as
- the magnitude tends closer to the imaginary component than the real.
+ the magnitude tends closer to the imaginary component than the real
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+.
  Beyond 100 THz, the imaginary component dips below zero, with a trough
- of -0.5 mS around 250 THz.
- Looking to the phase information (figure 
+ of -0.5 mS around 250 THz
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Looking to the phase information (figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:david-phase"
@@ -797,12 +1054,13 @@ noprefix "false"
 
 \end_inset
 
-), before 10 GHz the phase can be seen to be 0, however as the imaginary
- component begins to peak, the phase increases to a max of 90 degrees, continuin
-g until 100 THz where the negative imaginary peak causes the phase to sharply
- drop to -90 degrees.
- There is little difference between the two dopants, they are equal until
- 100 THz where the TTF shows a -100 THz offset from the CoCp
+), before 10 GHz the phase can be seen to be approximately 0, however as
+ the imaginary component begins to peak, the phase increases to a max of
+ 90 degrees, continuing until 100 THz where the phase sharply drops to -90
+ degrees.
+ There is little difference between the two dopants, particularly prior
+ to 100 THz.
+ Following this, the TTF shows a -100 THz offset from the CoCp
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -812,6 +1070,16 @@ g until 100 THz where the negative imaginary peak causes the phase to sharply
 \end_inset
 
  species.
+ CoCp
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ also reaches -56 degrees as compared to TTF's -50 degrees at its minima.
 \end_layout
 
 \begin_layout Standard
@@ -1152,28 +1420,42 @@ noprefix "false"
  In general, the intraband conductivity can be seen to exist up to the 10
  THz portion of the spectrum while the interband has the majority of it's
  contributions above the 10 THz range.
- The intraband can be seen to dominate the total contribution and is responsible
- for the conductivity up to the previously mentioned 100 GHz cutoff.
- The interband interactions begin after the 10 THz range, initially the
- imaginary component sharply drops and relaxes with a minima at 187 THz
- and 248 THz for TTF and CoCp
-\begin_inset script subscript
+ The intraband can be seen to dominate the total conductivity, it is largely
+ invisible in the previous combined view of figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-magnitude"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The interband interactions begin after the 10 THz range, as the real component
+ steps from 1 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ to 60 
+\begin_inset Formula $\mu S$
+\end_inset
+
+ around 200 THz, the imaginary component displays a negative peak over the
+ same spectral band.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex TODO Note (inline)
+status open
 
 \begin_layout Plain Layout
-2
+Static value continues past THz
 \end_layout
 
 \end_inset
 
-.
- As the imaginary component minimises, the real component begins sharply
- rising over a 100 THz range to a maximum of 60 
-\begin_inset Formula $\mu S$
-\end_inset
 
-.
- This continues throughout the hundreds of terahertz range and beyond the
- region of interest.
 \end_layout
 
 \begin_layout Standard
@@ -1340,7 +1622,7 @@ noprefix "false"
 \end_inset
 
 .
- From this point net carrier concentration and dopant concentration may
+ From this point, net carrier concentration and dopant concentration may
  be used somewhat interchangeably with the understanding that they are related
  by this function.
 \end_layout
@@ -1368,7 +1650,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Fermi level associated with different carrier concentrations
+Fermi level associated with different carrier concentrations 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:fermi-concentration-func"
@@ -1592,7 +1874,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../Resources/carrier-density/real-com-carrier-surf-sl5e-12-T300-logCB.png
+	filename ../Resources/carrier-density/real-com-carrier-surf-sl1e-12-T300-logCB.png
 	lyxscale 20
 	width 80col%
 
@@ -1636,7 +1918,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../Resources/carrier-density/im-com-carrier-surf-sl5e-12-T300-logCB.png
+	filename ../Resources/carrier-density/im-com-carrier-surf-sl1e-12-T300-logCB.png
 	lyxscale 20
 	width 80col%
 
@@ -1672,12 +1954,9 @@ name "fig:surf-carrier-conc-im"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Complex conductivity over frequency for different carrier densities.
- Room temperature with a scatter lifetime of 
-\begin_inset Formula $5\times10^{-12}$
-\end_inset
-
- s and a Fermi velocity energy scale of 2.8 eV
+Complex conductivity over frequency for different carrier densities at room
+ temperature with a scatter lifetime of 1 ps and a Fermi velocity energy
+ scale of 2.8 eV 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:surf-carrier-concentration"
@@ -1698,21 +1977,86 @@ name "fig:surf-carrier-concentration"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
+Conductivity can broadly be seen to follow the same spectral profile as
+ a function of carrier concentrations up to 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $1\times10^{15}$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset script superscript
 
 \begin_layout Plain Layout
-linear surface plot?
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-2
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-The conductivity can broadly be seen to follow the same spectral profile
- over the range of carrier concentrations as can be seen in figure 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ as can be seen in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:david-magnitude"
@@ -1723,7 +2067,20 @@ noprefix "false"
 \end_inset
 
 .
- Variation comes in the magnitude of the various regions.
+ Beyond this threshold, the conductivity below 10 THz begins to increase
+ exponentially.
+ Above 100 THz, an opposite trend can be identified with areas of the surface
+ showing a lower value.
+ From the high frequency, high carrier smear visible in the surface, the
+ spectral behaviour of this lowering conductivity is not static but a function
+ of both frequency and carrier concentration.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Variation in the lower frequency comes largely in the magnitude of the various
+ regions.
  For both the real and imaginary component, the max value (pre-cutoff for
  the real component and the peak of the imaginary component) can be seen
  to be constant over net carrier concentrations up until around 
@@ -1979,6 +2336,11 @@ m
  they have increased by an order of magnitude to hundreds of milli-siemens.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 For the real conductivity component, beyond this previously mentioned 
 \family roman
@@ -2064,167 +2426,9 @@ m
 \end_inset
 
  threshold, the cutoff frequency begins to increase as can be seen from
- the higher 20 GHz peak smearing the lighter blue across a higher frequency
+ the higher gigahertz value smearing the lighter blue across a higher frequency
  band.
- This moves the cutoff from 120 GHz to around 180 GHz.
- The value that the real conductivity takes above the cutoff frequency decreases
- past the 10
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-15
-\end_layout
-
-\end_inset
-
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-m
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
--2
-\end_layout
-
-\end_inset
-
- carrier concentration threshold, from 58
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- 
-\begin_inset Formula $\mu S$
-\end_inset
-
- to 2 
-\begin_inset Formula $\mu S$
-\end_inset
-
- at 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $1\times10^{17}$
-\end_inset
-
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-m
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
--2
-\end_layout
-
-\end_inset
-
-.
+ This moves the cutoff from 100 GHz to around 1 THz.
  For the imaginary component, at low carrier concentrations the peak value
  decreases to around 1 
 \family default
@@ -2244,7 +2448,7 @@ m
 \end_inset
 
  by 500 THz.
- As the carrier concentration decreases beyond 
+ As the carrier concentration increases beyond 
 \family roman
 \series medium
 \shape up
@@ -2309,21 +2513,11 @@ m
 
 \end_inset
 
- this value decreases into the small negative values that can be seen in
- figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:david-magnitude"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, the frequency at which the drop occurs lowers and the steeper colour gradient
- indicates that the change happens faster.
- The earliest frequency that this occurs at is around 10 THz and 
-\begin_inset Formula $1\times10^{15}$
+ this value decreases into negative values, the frequency at which the drop
+ occurs lowers and the steeper colour gradient indicates that the change
+ happens faster.
+ The earliest frequency that this occurs at is around 50 THz and 
+\begin_inset Formula $6\times10^{15}$
 \end_inset
 
  
@@ -2375,9 +2569,9 @@ m
 \end_inset
 
 .
- Finally, as the carrier concentration further increases and the 120 GHz
- peak increases in magnitude, the frequency for this high frequency conductivity
- drop begins to increase again.
+ Finally, as the carrier concentration further increases and the 100 GHz
+ intraband value increases in magnitude, the frequency for this high frequency
+ imaginary conductivity drop begins to increase again.
 \end_layout
 
 \begin_layout Standard
@@ -2474,7 +2668,8 @@ name "fig:carrier-conc-inter"
 
 \begin_layout Plain Layout
 Intraband (a) and interband (b) conductivity for high and low carrier concentrat
-ion graphene species
+ion graphene species at room temperature and a scatter lifetime of 1 ps
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:inter-intra-carrier-conc"
@@ -2603,11 +2798,10 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Looking to the intraband interactions, the real and imaginary components
- can be seen to have the same profile as seen previously, the differences
- lie in magnitude.
+Looking to the intraband interactions, both components can be seen to have
+ the same profiles as seen previously, the differences lie in magnitude.
  Higher net carrier concentrations can be seen to increase the magnitude
- in a non-linear fashion, this behaviour can also be seen in figure 
+ exponentially, this behaviour was previously identified in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:surf-carrier-concentration"
@@ -2623,10 +2817,11 @@ noprefix "false"
 \begin_layout Standard
 The interband conductivity can be seen to show more variation over the prescribe
 d carrier concentration range.
- Low carrier concentrations result in a higher initial imaginary component
+ Low carrier concentrations result in a high initial imaginary component
  that does not descend into negative values.
- As concentration increases, the imaginary component decreases more, forming
- a sharp trough that also reaches its lowest value at a higher frequency.
+ As concentration increases, the imaginary component decreases more with
+ a sharper gradient, forming a sharp trough that also reaches its lowest
+ value at a higher frequency.
 \end_layout
 
 \begin_layout Standard
@@ -2685,7 +2880,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Complex conductivity phase for three net carrier concentrations
+Complex conductivity phase for three net carrier concentrations at room
+ temperature and a scatter lifetime of 1 ps 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:carrier-conc-phase"
@@ -2719,78 +2915,23 @@ noprefix "false"
 
 .
  From these it is clear that the dopant concentration has a significant
- effect on the conductivity's phase, particularly in the terahertz range.
- The 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $1\times10^{8}$
-\end_inset
-
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-m
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
--2
-\end_layout
+ effect on the conductivity's phase in the terahertz spectrum.
+ As the carrier concentration is increased, the phase can be seen to increase
+ to 90 degrees for longer throughout the 10 GHz decade and begin dropping
+ into negative phase.
+ From figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-phase"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-series does not have a phase of 0 throughout the GHz range while the higher
- doped series' do.
- Additionally, this lower doped species does not have a negative phase in
- the THz range.
- The remaining two have significant drops in phase throughout the terahertz
- spectrum but at different frequencies, increasing the carrier concentration.
+, it can be seen that once the phase decreases below 0, the frequency of
+ the phase minima is also a function of carrier concentration with higher
+ carrier concentration species having a higher minima frequency.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2920,36 +3061,26 @@ noprefix "false"
 
  presents the decomposed intraband and interband conductivity contributions
  for three different temperatures, 10 K, 300 K and 2230 K in order to compare
- low, 
-\begin_inset Quotes bld
-\end_inset
-
-natural
-\begin_inset Quotes brd
-\end_inset
-
- and high temperatures
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-the previously mentioned high frequency behaviour can be seen clearer
+ low, room and high temperatures.
+ For intraband conductivity, temperature can be seen to have little effect
+ throughout the inspected thermal range.
+ The low and room temperature series' effectively overlap, while moving
+ to the upper temperature limit increases the conductivity by only 5 mS
+ or 10%.
 \end_layout
 
-\end_inset
-
-.
- In general, temperature can be seen to have little effect throughout the
- inspected temperature range.
- As the temperature increases, the negative imaginary peak gets smaller
- in value with a smoother gradient.
- For the real component, althought the final value does not change, the
- gradient with which it is approached changes.
+\begin_layout Standard
+For the interband interactions, as the temperature increases, the negative
+ imaginary peak gets smaller in value with a smoother gradient.
+ For the real component, although the final value does not change, the gradient
+ with which it is approached changes.
  At low temperatures, the increase takes place over a tight spectral range
  with a sharp step action.
  As the temperature increases, the spectral band over which the transition
  occurs broadens with a smoother gradient while maintaining the centre frequency
  of 200 THz.
+ Overall, considering the complex magnitude for interband interactions,
+ little variation can be seen throughout the prescribed temperature range.
 \end_layout
 
 \begin_layout Standard
@@ -3046,7 +3177,7 @@ name "fig:temp-inter"
 
 \begin_layout Plain Layout
 Intraband (a) and interband (b) conductivity for low, room and high temperature
- graphene using TTF doping
+ graphene using TTF doping and a a scatter lifetime of 1 ps 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:inter-intra-temperature"
@@ -3080,10 +3211,10 @@ noprefix "false"
 
 .
  Similar to the magnitude, the phase can be seen to show little variations
- throughout the subject spectral range.
- The lower temperatures result in sharper steps around 100 THz, whereas
- the higher temperature species has a smoother motion that does not reach
- -90 degrees like the other two.
+ below 10 THz.
+ Lower temperatures result in sharper drops around 100 THz with a larger
+ negative peak, whereas the higher temperature species has a smoother motion
+ that does not become negative.
 \end_layout
 
 \begin_layout Standard
@@ -3110,6 +3241,7 @@ status open
 
 \begin_layout Plain Layout
 Complex conductivity phase for three different temperatures using TTF doping
+ at room temperature and a scatter lifetime of 1 ps 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:temperature-phase"
@@ -3152,7 +3284,7 @@ literal "false"
 
 \end_inset
 
-, with this in mind values between 100 ps and 0.01 ps were simulated.
+, with this in mind values between 10 ps and 0.1 ps were simulated.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3171,17 +3303,7 @@ noprefix "false"
 Looking to the real component, the scatter lifetime can be seen to affect
  both the cutoff frequency and the magnitude of the pre-cutoff value.
  As the lifetime increases, the cutoff frequency occurs at a lower value,
- from 
-\begin_inset Flex TODO Note (Margin)
-status open
-
-\begin_layout Plain Layout
-values
-\end_layout
-
-\end_inset
-
-.
+ from around 500 GHz to 50 GHz.
  The magnitude of the conductivity also increases exponentially as the lifetime
  is increased.
 \end_layout
@@ -3292,7 +3414,9 @@ name "fig:surf-scatter-inter"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Complex conductivity over frequency for different scattering lifetimes
+Complex conductivity over frequency for different scattering lifetimes simulated
+ for TTF n-type doping at room temperature with a scatter lifetime of 1
+ ps 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:surf-scatter-lifetime"
@@ -3305,19 +3429,6 @@ name "fig:surf-scatter-lifetime"
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-linear surface plot?
 \end_layout
 
 \end_inset
@@ -3344,6 +3455,18 @@ noprefix "false"
  is broadened while increasing the magnitude.
  Looking to the interband contributions, the three series show no variation,
  the scatter lifetime has no effect.
+ This can be seen in the surfaces of figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:surf-scatter-lifetime"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as straight lines of sharp colour gradients through the scatter lifetime
+ range at 200 THz.
 \end_layout
 
 \begin_layout Standard
@@ -3440,7 +3563,7 @@ name "fig:scatter-inter"
 
 \begin_layout Plain Layout
 Intraband (a) and interband (b) conductivity with 3 different scattering
- times for graphene using TTF doping
+ times for graphene using TTF doping 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:inter-intra-scatter-lifetime"
@@ -3484,6 +3607,7 @@ status open
 
 \begin_layout Plain Layout
 Complex conductivity phase for three different temperatures using TTF doping
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:scatter-phase"
@@ -3528,9 +3652,30 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-The interband conductivity is restricted to the higher–energy terahertz
- portion of the spectrum than the lower energy intraband interactions.
- The reason for this can be seen reflected in equations 
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+Intraband and drude stuff, graphs look the same
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As discussed, the interband conductivity is restricted to the higher–energy
+ terahertz portion of the spectrum than the lower energy intraband interactions.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+The reason for this can be seen reflected in equations 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:intra-conductivity"
@@ -3560,7 +3705,25 @@ noprefix "false"
 \end_inset
 
 .
- When considering n-type doping, the Fermi level is increased from the Dirac
+\end_layout
+
+\end_inset
+
+ The reason for this can be seen by considering the required energy for
+ each type of transition.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+With a non-zero Fermi level offset from the Dirac point, resistance drops
+ as carriers are available for conduction.
+ 
+\end_layout
+
+\end_inset
+
+When considering n-type doping, the Fermi level is increased from the Dirac
  point.
  As it does, the energy states between it and the Dirac point are filled
  and thus are unavailable for electrons to transition into.
@@ -3569,7 +3732,7 @@ noprefix "false"
  n-type doping), in order for an electron to make a direct transition without
  momentum change it must absorb at least two times the Fermi level energy
  in order for the destination to be an empty state.
- This restriction, more formally that incident photons of angular freqency,
+ This restriction, more formally that incident photons of angular frequency,
  
 \begin_inset Formula $\omega$
 \end_inset
@@ -3684,51 +3847,19 @@ Why?
 \end_layout
 
 \begin_layout Standard
-From the presented trends it is clear both that graphene must be doped beyond
- 10
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-14
-\end_layout
-
-\end_inset
-
- m
-\begin_inset script superscript
-
-\begin_layout Plain Layout
--2
-\end_layout
-
-\end_inset
-
- carriers to obtain gigahertz conductivity above 20 mS and that, more generally,
- varying the dopant concentration provides a highly-tunable method of altering
- graphene's electrical characteristics.
+From the presented trends it is clear both that graphene must be heavily
+ doped in order to obtain significant gigahertz conductivity and that, more
+ generally, varying the dopant concentration provides a highly-tunable method
+ of altering graphene's electrical characteristics.
  This has particular implications for terahertz applications when considering
  the phase information.
  As presented, the conductivity's complex phase can be shifted in frequency
  and magnitude in the terahertz spectrum by varying the net carrier concentratio
 n.
  The phase can also be kept positive at terahertz frequencies with a lower
- carrier concentration, although this would severely limit the conductivity
- magnitude.
+ carrier concentration, although this severely limits the conductivity magnitude.
  This flexibility in reactive electrical characteristics could prove applicable
  to high frequency applications.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-linear plot discussion?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -3740,13 +3871,13 @@ The conductivity spectrum as a function of temperature shows promising results
  for the electrical stability of graphene over a wide thermal operating
  range.
  The intraband conductivity, specifically, showed little variation in behaviour
- between 10 K and the highest stable temperatures with an increase of 20
- mS.
- Looking to the intraband interactions, these results showed the opposite
+ between 10 K and the highest stable temperatures with the previously reported
+ 10% increase.
+ Looking to the interband interactions, these results showed the opposite
  trend with the magnitude being decreased as the temperature increased.
  This would suggest that graphene could prove useful in high temperature
- devices at gigahertz frequencies, but may prove less applicable to high
- temperature terahertz applications considering the already lower magnitude.
+ devices with special consideration being needed for terahertz applications
+ where the phase can be more variable around the critical frequency.
 \end_layout
 
 \begin_layout Standard
@@ -3831,19 +3962,50 @@ noprefix "false"
  Similarly to this function, a decreasing temperature increases the gradient
  of this transition between two quasi-constant values, tending towards a
  single step action as the temperature approaches 0 K.
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
+Higher temperatures allow higher interband conductivity at lower frequencies
+ than would otherwise be required to overcome the previously described 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
 
-\begin_layout Plain Layout
-Why?
-\end_layout
+\begin_inset Formula $\hbar\omega>2|E_{F}|$
+\end_inset
+
+ restriction.
+ The higher energy of the electrons associated with their temperature reduces
+ the extra required energy to make the transition.
+ From figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:temp-inter"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+ this can be seen in two aspects of the real conductivity.
+ Throughout the gigahertz spectrum, the higher temperature blue line has
+ a higher constant value than the others.
+ This higher conductivity is associated with the slightly lower energy required
+ to make an interband transition as a result of the electron's higher energies.
+ Additionally, as the critical temperature is approached, the higher temperature
+ series begins smoothly rising earlier than lower temperature series'.
+ These behaviours are a result of the statistical distribution of both the
+ temperature of the electrons and the energy of the incident photons.
 \end_layout
 
 \begin_layout Paragraph
@@ -3965,6 +4127,17 @@ lstparams "caption={Script for calculating conductivity over a range of frequenc
 LatexCommand lstinputlisting
 filename "../2D-Conductivity/conductivity_calc_surface.m"
 lstparams "caption={Script for calculating conductivity over a range of frequencies and presenting as a surface},label={sheet_calculation_script_surface}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../2D-Conductivity/conductivity_phase_calculations.m"
+lstparams "caption={Script for plotting complex conductivity phase over a range of frequencies},label={phase_script}"
 
 \end_inset
 
