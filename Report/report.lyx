@@ -182,7 +182,19 @@ University of Surrey
 \end_layout
 
 \begin_layout Abstract
-abstract
+Graphene has many desirable mechanical and electrical characteristics that
+ make it an exciting material for use in innovative devices.
+ In particular, its extremely high carrier mobility leads to high operating
+ frequencies that potentially make the material suitable for the gigahertz
+ and terahertz spectrum.
+ The use of graphene for high-frequency electronics applications is considered,
+ firstly as a channel material for digital logic transistor technology with
+ a focus on graphene nanoribbon FETs (GNRFET).
+ Graphene's applicability is then evaluated for flexible antennae with prospecti
+ve use in wearable and IoT devices.
+ Part two models graphene's sheet conductivity, exploring how net carrier
+ concentration, temperature and scatter lifetime affect both intraband and
+ interband electrical characteristics.
 \end_layout
 
 \begin_layout Standard
@@ -275,7 +287,7 @@ Introduction
 \begin_layout Standard
 Graphene is a 2D allotrope of carbon with highly interesting mechanical
  and electrical properties that have made it a popular target of research
- over the last two decades since it's experimental discovery in 2004 
+ over the last two decades since its experimental discovery in 2004 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "geim-04"
@@ -289,7 +301,7 @@ literal "false"
 \begin_inset Formula $p$
 \end_inset
 
- orbitals.
+-orbitals.
  This leaves one remaining 
 \begin_inset Formula $\pi$
 \end_inset
@@ -307,9 +319,10 @@ noprefix "false"
 
 .
  As a result, graphene has a 0 energy bandgap, the conduction and valence
- band meet at a single point known as the Dirac point.
+ band meet at a single point known as the Dirac point at the K points in
+ momentum space.
  Both bands linearly extend away from the Dirac point, a highly unusual
- result that allows electrons to act as massless Fermions and move with
+ result that allows electrons to act as massless Fermions which move with
  extremely high mobility, as high as 200,000 cm
 \begin_inset script superscript
 
@@ -337,7 +350,7 @@ s
 
 \end_inset
 
- at room temperature 
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "graphene-review-2010"
@@ -410,7 +423,7 @@ With these highly sought after properties, it is unsurprising that graphene
 \end_layout
 
 \begin_layout Standard
-This work explores the suitability of graphene for high frequency applications.
+This work explores the suitability of graphene for high-frequency applications.
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -421,7 +434,7 @@ noprefix "false"
 
 \end_inset
 
- presents two applications of graphene that take advantage of it's electrical
+ presents two applications of graphene that take advantage of its electrical
  and mechanical behaviour at high frequencies.
  Section 
 \begin_inset CommandInset ref
@@ -434,6 +447,8 @@ noprefix "false"
 \end_inset
 
  presents an investigation into the 2D sheet conductivity of the material.
+ The net carrier concentration, temperature and scatter lifetime are varied
+ in order to visualise how this affects the materials electrical properties.
 \end_layout
 
 \begin_layout Section
@@ -448,25 +463,20 @@ name "sec:Applications"
 \end_layout
 
 \begin_layout Standard
-This section explores two uses of graphene for high frequency applications.
- First, the applicability of graphene for field effect transistors will
+This section explores two uses of graphene for high-frequency applications.
+ First, the applicability of graphene for field-effect transistors will
  be considered as a channel material.
  Throughout, a particular focus will be paid to use in digital logic and
  thus as a possible replacement for the current Silicon CMOS/MOSFET paradigm.
- 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-second application
-\end_layout
-
-\end_inset
-
-
+Following its prospective use in digital logic, graphene's applicability
+ as a flexible antennae material will be considered.
+ As the space of wearable and bio-electronics develop, the need for strong,
+ flexible and efficient antennae at gigahertz frequencies is clear.
+ Existing flexible antennae technology will be considered before presenting
+ how graphene could be included.
 \end_layout
 
 \begin_layout Subsection
@@ -553,8 +563,8 @@ name "fig:cpu-transistor-number"
 However, as transistors are made smaller, theoretical limits for many engineerin
 g challenges are approached.
  In 2015, the ITRS predicted that by 2021 the current push for smaller transisto
-rs would no longer be economically viable, instead requiring innovative
- 3D device structures
+rs would no longer be economically viable, instead, innovative 3D device
+ structures would be required 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "transistors-21"
@@ -566,13 +576,11 @@ literal "false"
  Some of the most important limiting factors in the current Silicon landscape
  are short-channel effects, a group of undesirable electrical properties
  that can occur when the channel length of a MOSFET device is of the same
- order of magnitude as the depletion layer
-\begin_inset Flex TODO Note (Margin)
-status open
-
-\begin_layout Plain Layout
-cite, reword?
-\end_layout
+ order of magnitude as the depletion layer 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "short-channel"
+literal "false"
 
 \end_inset
 
@@ -587,8 +595,8 @@ large-area graphene
  has no bandgap.
  As such it is unable to turn off, making it unsuitable as a channel material
  for a digital MOSFET.
- Quantitatively, this can be measured with by the ratio of on current to
- off current or the 
+ Quantitatively, this can be measured with the ratio of on current to off
+ current or the 
 \emph on
 on/off ratio
 \emph default
@@ -615,8 +623,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Therefore, it is clear that in order to use graphene as a channel material
- a bandgap must be formed.
+Therefore, it is clear that to use graphene as a channel material a bandgap
+ must be formed.
  There are a number of ways to do so, a selection of band diagrams for such
  structures can be seen in figure 
 \begin_inset CommandInset ref
@@ -630,7 +638,7 @@ noprefix "false"
 
 .
  For digital applications, one of the most promising methods for creating
- a band gap is by confining graphene in one dimension to create a 
+ a bandgap is by confining graphene in one dimension to create a 
 \emph on
 graphene nanoribbon
 \emph default
@@ -657,7 +665,6 @@ noprefix "false"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -764,11 +771,327 @@ name "fig:gnrget-structure"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:gnrfet-low-power-results"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ compares transistor performance characteristics for both silicon and GNR-based
+ FET technology 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gnrfet-low-power"
+literal "false"
+
+\end_inset
+
+.
+ High-quality GNRFETs can be seen to demonstrate the lowest sub-threshold
+ swing and a reasonably high value for 
+\begin_inset Formula $\nicefrac{I_{on}}{I_{off}}$
+\end_inset
+
+.
+ Further analyses from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gnrfet-low-power"
+literal "false"
+
+\end_inset
+
+ suggest that GNRFET demonstrates better performance than silicon for low-power
+ applications with lower power consumption.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Advantages over silicon
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S (mV/dec)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+I
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+on
+\end_layout
+
+\end_inset
+
+/I
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+off
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+DD
+\end_layout
+
+\end_inset
+
+(V)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silicon CMOS (High Performance)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+93.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.49\times10^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silicon CMOS (Low Power)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86.96
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5.12\times10^{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GNRFET (Pristine)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.81\times10^{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GNRFET (Rough Edge)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+140.85
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.85\times10^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FET operating characteristics for two silicon-based (16 nm) and two GNR-based
+ transistor technologies.
+ Subthreshold swing, on/off ratio and threshold voltage reported 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gnrfet-low-power"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:gnrfet-low-power-results"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -779,10 +1102,8 @@ Advantages over silicon
 \begin_layout Standard
 Some of the limitations of GNR-based FETs include the difficulty in fabricating
  high-quality graphene and specifically graphene nanoribbons.
- On top of the typical issues in graphene fabrication including the requirements
- for tight environmental control.
- Edge roughness can significantly affect the channels properties, introducing
- new scattering centres 
+ Edge roughness can significantly affect the properties of the channel,
+ introducing new scattering centres 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "gnrfet-structure-image"
@@ -790,8 +1111,28 @@ literal "false"
 
 \end_inset
 
-.
- However, the major constraint of GNRFETs is the limited mobility.
+, this can be seen in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:gnrfet-low-power-results"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with rough-edge graphene demonstrating a higher subthreshold swing than
+ both pristine graphene and the existing silicon technology.
+ A rough edge also increases delay and leakage power 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gnrfet-low-power"
+literal "false"
+
+\end_inset
+
+, further emphasising the requirement for high-quality fabrication methods.
+ However, one of the major constraints of GNRFET technology is limited mobility.
  Although graphene has incredibly high carrier mobility, by opening the
  bandgap as seen in figure 
 \begin_inset CommandInset ref
@@ -809,15 +1150,160 @@ noprefix "false"
 
 \begin_layout Standard
 Despite these drawbacks, GNRFETs look to be one of the most promising avenues
- for the post-Silicon, high-performance CMOS/MOSFET electronics.
+ for post-silicon, high-performance and/or low-power CMOS/MOSFET electronics.
 \end_layout
 
 \begin_layout Subsection
-Terahertz Radiation
+Flexible Antennae
+\end_layout
+
+\begin_layout Standard
+The miniaturisation and increased efficiency of electronics have pushed
+ for smaller-scale devices including IoT and wearable devices.
+ One critical component for these devices is efficient wireless technologies
+ and antennae in particular.
+\end_layout
+
+\begin_layout Standard
+Graphene has a number of properties that make it a suitable prospective
+ material for such purposes.
+ Being flexible, bio-compatible and highly stiff 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "warda-gfet-review"
+literal "false"
+
+\end_inset
+
+, graphene should be able to withstand much of the repeated physical deformation
+s that could be expected in the wearable electronics domain.
+ The previously mentioned electrical properties are obviously also applicable
+ to the domain - high mobility, conductivity and operating frequencies suggest
+ that the material could be applicable to gigahertz applications and thus
+ Wi-Fi and Bluetooth usage.
+\end_layout
+
+\begin_layout Standard
+Existing technologies for flexible antennae include printed metal-ink components
+ including copper and silver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "flexible-antennae-review"
+literal "false"
+
+\end_inset
+
+.
+ An advantage of metal-based inks are the inherently high conductivities
+ and some helpful mechanical properties.
+ However there are disadvantages, silver in particular is a valuable metal
+ that is too expensive to be used extensively in antennae 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "flexible-antennae-review"
+literal "false"
+
+\end_inset
+
+.
+ Copper also has disadvantages in its tendency to oxidise when exposed to
+ the environment as could be expected in wearable or IoT applications.
+ 
+\end_layout
+
+\begin_layout Standard
+Printed graphene antennae using water-transfer technology have been demonstrated
+ that function at the 2.4 GHz WiFi/Bluetooth spectrum 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "water-transfer-graphene-antennae"
+literal "false"
+
+\end_inset
+
+, the power spectrum compared to a copper antenna can be seen in figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:antenna-power"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This room-temperature method demonstrates that as the performance is comparable
+ with metal-based inks, graphene's mechanical properties make it a highly
+ applicable material for wearable antennae.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename antennae-power.jpg
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Normalised radiation power for graphene and copper-based dipole antenna,
+ a) E-plane, b) H-plane 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "water-transfer-graphene-antennae"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:antenna-power"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Summary
+\end_layout
+
+\begin_layout Standard
+From these applications, it is clear that graphene has the potential to
+ revolutionise cutting-edge electronics domains including high-performance,
+ high-efficiency transistor technologies and the wearable/IoT devices.
+ Although the material does not yet have significant penetration in consumer
+ electronics, it is likely that this is not far away.
+ 
 \end_layout
 
 \begin_layout Section
@@ -832,8 +1318,8 @@ name "sec:Sheet-Conductivity-Modelling"
 \end_layout
 
 \begin_layout Standard
-This section presents a model for graphene's high frequency conductivity
- using the equation below below 
+This section presents a model for graphene's high-frequency conductivity
+ using the equation below 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "yao"
@@ -863,16 +1349,6 @@ Taking this equation, the first term accounts for the intraband transitions
 LatexCommand cite
 key "david-paper"
 literal "false"
-
-\end_inset
-
-
-\begin_inset Flex TODO Note (Margin)
-status open
-
-\begin_layout Plain Layout
-cite
-\end_layout
 
 \end_inset
 
@@ -944,9 +1420,8 @@ noprefix "false"
 .
  These were varied within reasonable ranges in order to investigate how
  such variations affect the conductivity, both as a whole and individually.
- Prior to these wider investigations, however, experimental data was recreated
- in order both to validate the model and to allow better identification
- of later differences from the planned variations.
+ Prior to these wider investigations, however, experimental data was simulated
+ in order both to validate the model.
 \end_layout
 
 \begin_layout Subsection
@@ -1012,7 +1487,7 @@ noprefix "false"
 \end_inset
 
  respectively with both having a cutoff frequency of around 100 GHz.
- Beyond the cutoff frequency the value is around 1 mS by 10 THz.
+ Beyond the cutoff frequency, the value is around 1 mS by 10 THz.
  The imaginary component peaks over the same frequency band that the real
  component declines and the two intersect at around 150 GHz at a conductivity
  of 31 mS with CoCp
@@ -1044,7 +1519,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-Looking to the phase information (figure 
+Looking at the phase information (figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:david-phase"
@@ -1230,7 +1705,7 @@ With Fermi velocity energy scale,
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Carrier concentration values for dopants from 
+Carrier concentration values for n-type dopants from 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "david-paper"
@@ -1418,7 +1893,7 @@ noprefix "false"
  Comparing the two, it can be seen that the interactions happen over largely
  separate frequency ranges.
  In general, the intraband conductivity can be seen to exist up to the 10
- THz portion of the spectrum while the interband has the majority of it's
+ THz portion of the spectrum while the interband has the majority of its
  contributions above the 10 THz range.
  The intraband can be seen to dominate the total conductivity, it is largely
  invisible in the previous combined view of figure 
@@ -1432,7 +1907,7 @@ noprefix "false"
 \end_inset
 
 .
- The interband interactions begin after the 10 THz range, as the real component
+ The interband interactions begin after the 10 THz range - as the real component
  steps from 1 
 \begin_inset Formula $\mu S$
 \end_inset
@@ -1443,19 +1918,6 @@ noprefix "false"
 
  around 200 THz, the imaginary component displays a negative peak over the
  same spectral band.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Static value continues past THz
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1650,7 +2112,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Fermi level associated with different carrier concentrations 
+Fermi level associated with different net carrier concentrations 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:fermi-concentration-func"
@@ -2429,7 +2891,7 @@ m
  the higher gigahertz value smearing the lighter blue across a higher frequency
  band.
  This moves the cutoff from 100 GHz to around 1 THz.
- For the imaginary component, at low carrier concentrations the peak value
+ For the imaginary component, at low carrier concentrations, the peak value
  decreases to around 1 
 \family default
 \series default
@@ -2570,7 +3032,7 @@ m
 
 .
  Finally, as the carrier concentration further increases and the 100 GHz
- intraband value increases in magnitude, the frequency for this high frequency
+ intraband value increases in magnitude, the frequency for this high-frequency
  imaginary conductivity drop begins to increase again.
 \end_layout
 
@@ -2704,7 +3166,7 @@ noprefix "false"
 
 \end_inset
 
- presents the conductivity for three graphene species of differing carrier
+ presents the conductivity for three graphene species of different carrier
  concentrations decomposed into the intraband and interband components.
  The blue series, 
 \family roman
@@ -2798,7 +3260,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Looking to the intraband interactions, both components can be seen to have
+Looking at the intraband interactions, both components can be seen to have
  the same profiles as seen previously, the differences lie in magnitude.
  Higher net carrier concentrations can be seen to increase the magnitude
  exponentially, this behaviour was previously identified in figure 
@@ -2914,7 +3376,7 @@ noprefix "false"
 \end_inset
 
 .
- From these it is clear that the dopant concentration has a significant
+ From these, it is clear that the dopant concentration has a significant
  effect on the conductivity's phase in the terahertz spectrum.
  As the carrier concentration is increased, the phase can be seen to increase
  to 90 degrees for longer throughout the 10 GHz decade and begin dropping
@@ -3065,7 +3527,7 @@ noprefix "false"
  For intraband conductivity, temperature can be seen to have little effect
  throughout the inspected thermal range.
  The low and room temperature series' effectively overlap, while moving
- to the upper temperature limit increases the conductivity by only 5 mS
+ to the upper-temperature limit increases the conductivity by only 5 mS
  or 10%.
 \end_layout
 
@@ -3176,8 +3638,8 @@ name "fig:temp-inter"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Intraband (a) and interband (b) conductivity for low, room and high temperature
- graphene using TTF doping and a a scatter lifetime of 1 ps 
+Intraband (a) and interband (b) conductivity for low, room and high-temperature
+ graphene using TTF doping and a scatter lifetime of 1 ps 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:inter-intra-temperature"
@@ -3300,7 +3762,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Looking to the real component, the scatter lifetime can be seen to affect
+Looking at the real component, the scatter lifetime can be seen to affect
  both the cutoff frequency and the magnitude of the pre-cutoff value.
  As the lifetime increases, the cutoff frequency occurs at a lower value,
  from around 500 GHz to 50 GHz.
@@ -3309,8 +3771,7 @@ Looking to the real component, the scatter lifetime can be seen to affect
 \end_layout
 
 \begin_layout Standard
-Considering the imaginary component, a somewhat similar behaviour can be
- seen.
+Considering the imaginary component, somewhat similar behaviour can be seen.
  The same exponential growth in magnitude can be seen in the 100 GHz peak.
  With regards to the spectral behaviour, increasing scatter lifetime reduces
  the frequency of the leading edge of the peak, broadening the bandwidth.
@@ -3453,7 +3914,7 @@ noprefix "false"
  seen in the intraband conductivity.
  The bandwidth of the imaginary component for the higher lifetime species
  is broadened while increasing the magnitude.
- Looking to the interband contributions, the three series show no variation,
+ Looking at the interband contributions, the three series show no variation,
  the scatter lifetime has no effect.
  This can be seen in the surfaces of figure 
 \begin_inset CommandInset ref
@@ -3640,11 +4101,11 @@ noprefix "false"
 
  presents the complex phase of the conductivity for the three previous lifetimes.
  Following the observation that the interband conductivity is unaffected
- by scatter lifetime, it follows that the phase is also unchanged across
- the selected lifetimes.
+ by scatter lifetime, it follows that the high-frequency phase is also unchanged
+ across the selected lifetimes.
  the phase is affected in the lower gigahertz ranges, however, with a longer
  lifetime being associated with an earlier rising edge in the spectrum and
- a longer bandwidth of 90 degree phase.
+ a longer bandwidth of 90-degree phase.
 \end_layout
 
 \begin_layout Subsection
@@ -3652,16 +4113,36 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Intraband and drude stuff, graphs look the same
-\end_layout
+The intraband transitions are derived from the Drude model of carrier transport
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "graphene-microwave,graphene-modal-prop-drude"
+literal "false"
 
 \end_inset
 
+.
+ This results in the characteristic real cutoff/imaginary peak behaviour
+ seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:david-intraband"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+.
+ From the simulated data from the literature, the gigahertz cutoff for intraband
+ conductivity can be seen to have an associated phase increase.
+ This suggests an increase in inductive reactance throughout this spectral
+ range which would have implications for applications employing graphene
+ at these frequencies and could suggest an increase in delay.
+ N-type doped material can be seen to show a negative phase peak at terahertz
+ frequencies indicating capacitive behaviour over this spectrum.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3730,8 +4211,9 @@ When considering n-type doping, the Fermi level is increased from the Dirac
  As interband conductivity involve transitions from the valence band or
  lower Dirac cone to the conduction band or upper cone (when considering
  n-type doping), in order for an electron to make a direct transition without
- momentum change it must absorb at least two times the Fermi level energy
- in order for the destination to be an empty state.
+ momentum change (straight up on a energy-momentum diagram) it must absorb
+ at least two times the Fermi level energy in order for the destination
+ to be an empty state.
  This restriction, more formally that incident photons of angular frequency,
  
 \begin_inset Formula $\omega$
@@ -3758,17 +4240,6 @@ literal "false"
  This is referred to as Pauli blocking after the exclusion principle of
  the same name which defines the population limit of the energy states in
  question.
-\end_layout
-
-\begin_layout Standard
-From the simulated data from literature, the gigahertz cutoff for intraband
- conductivity can be seen to have an associated phase increase.
- This suggests an increase in dynamic or reactive electrical behaviour throughou
-t this spectral range which would have implications for applications employing
- graphene at these frequencies.
- This phase is reversed at higher frequencies before beginning to relax
- as the imaginary component approaches zero which will have similar implications
- for THz applications.
 \end_layout
 
 \begin_layout Paragraph
@@ -3834,19 +4305,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Why?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 From the presented trends it is clear both that graphene must be heavily
  doped in order to obtain significant gigahertz conductivity and that, more
  generally, varying the dopant concentration provides a highly-tunable method
@@ -3859,7 +4317,7 @@ n.
  The phase can also be kept positive at terahertz frequencies with a lower
  carrier concentration, although this severely limits the conductivity magnitude.
  This flexibility in reactive electrical characteristics could prove applicable
- to high frequency applications.
+ to high-frequency applications.
 \end_layout
 
 \begin_layout Paragraph
@@ -3873,24 +4331,11 @@ The conductivity spectrum as a function of temperature shows promising results
  The intraband conductivity, specifically, showed little variation in behaviour
  between 10 K and the highest stable temperatures with the previously reported
  10% increase.
- Looking to the interband interactions, these results showed the opposite
+ Looking at the interband interactions, these results showed the opposite
  trend with the magnitude being decreased as the temperature increased.
- This would suggest that graphene could prove useful in high temperature
+ This would suggest that graphene could prove useful in high-temperature
  devices with special consideration being needed for terahertz applications
  where the phase can be more variable around the critical frequency.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-what does this mean
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -4003,7 +4448,7 @@ noprefix "false"
  This higher conductivity is associated with the slightly lower energy required
  to make an interband transition as a result of the electron's higher energies.
  Additionally, as the critical temperature is approached, the higher temperature
- series begins smoothly rising earlier than lower temperature series'.
+ series begins smoothly rising earlier than the lower temperature series'.
  These behaviours are a result of the statistical distribution of both the
  temperature of the electrons and the energy of the incident photons.
 \end_layout
@@ -4018,37 +4463,68 @@ From the presented trends for how conductivity is affected by a varied carrier
  the magnitude and spectral behaviour of intraband conductivity.
  A longer scatter lifetime was shown to increase the magnitude of gigahertz
  conductivity, this can be justified by considering the meaning of the scatter
- lifetime.
+ lifetime using the Drude model of charge transport.
+ The scatter lifetime is the average lifetime between collisions, more collision
+s reduce the overall mobility of the material.
+ A longer lifetime suggests that electrons are able to travel for longer
+ distances at higher speed without being slowed by scatter events, this
+ explains the higher magnitude throughout the gigahertz spectrum.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Equation analysis
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-Why?
-\end_layout
+The interband interactions were seen to be unaffected by the scatter lifetime.
+ This can be seen from the model where, unlike equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:intra-conductivity"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+, equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inter-conductivity"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+ has no reference to a lifetime term.
+ As a higher energy interaction, electrons are less affected by the scattering
+ of atoms and thus scatter lifetime is not employed for these high-frequency
+ transitions.
 \end_layout
 
 \begin_layout Section
 Conclusion
+\end_layout
+
+\begin_layout Standard
+Two applications of graphene at high frequencies have been presented.
+ The use of graphene nanoribbons as a channel material for FET technology
+ was shown to be a suitable prospective material for challenging the current
+ silicon CMOS/MOSFET paradigm as short-channel effects become harder to
+ engineer around.
+ Following this, graphene's applicability to flexible antennae was evaluated.
+ With a less established consumer domain, graphene's bio-compatibility,
+ flexibility, stiffness and electrical properties could overtake the more
+ limited metal-based ink approaches.
+\end_layout
+
+\begin_layout Standard
+The sheet conductivity of graphene was modelled and the effect of varying
+ carrier concentration, temperature and scatter lifetime was evaluated.
+ Carrier concentration was seen to have a significant effect on conductivity
+ as a result of its relation to the materials Fermi level.
+ Temperature, however, was shown to have little effect, a promising result
+ for the stability of graphene over a wide thermal operating range.
+ Scatter lifetime was also shown to have a significant effect on intraband
+ conductivity as a result of its importance in the Drude modelling of carrier
+ transport.
 \end_layout
 
 \begin_layout Standard

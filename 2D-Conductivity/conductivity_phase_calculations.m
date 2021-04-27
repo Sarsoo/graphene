@@ -33,25 +33,25 @@ for x=1:length(x_vals)
     cond(x, :) = sheet_conductivity(x_vals(x),... % omega (rads-1)
                                     fermi_from_carrier_density(1.3e17, ev_to_j(3)),... % fermi_level (J)
                                     300,... % temp (K)
-                                    5e-12); % scatter_lifetime (s)
+                                    1e-12); % scatter_lifetime (s)
 end
 
 if MULTIPLE_SERIES
     cond2 = zeros(length(x_vals), 2);
     for x=1:length(x_vals)
         cond2(x, :) = sheet_conductivity(x_vals(x),... % omega (rads-1)
-                                        fermi_from_carrier_density(1.3e17, ev_to_j(3)),... % fermi_level (J)
+                                        fermi_from_carrier_density(2.2e17, ev_to_j(3)),... % fermi_level (J)
                                         300,... % temp (K)
                                         1e-12); % scatter_lifetime (s)
     end
     
-    cond3 = zeros(length(x_vals), 2);
-    for x=1:length(x_vals)
-        cond3(x, :) = sheet_conductivity(x_vals(x),... % omega (rads-1)
-                                        fermi_from_carrier_density(1.3e17, ev_to_j(3)),... % fermi_level (J)
-                                        300,... % temp (K)
-                                        1e-13); % scatter_lifetime (s)
-    end
+%     cond3 = zeros(length(x_vals), 2);
+%     for x=1:length(x_vals)
+%         cond3(x, :) = sheet_conductivity(x_vals(x),... % omega (rads-1)
+%                                         fermi_from_carrier_density(1.3e17, ev_to_j(3)),... % fermi_level (J)
+%                                         300,... % temp (K)
+%                                         1e-13); % scatter_lifetime (s)
+%     end
 end
 
 if DISPLAY_HZ % divide radians back to hertz
@@ -62,15 +62,9 @@ end
 %%       RENDER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-RE_COLOUR = 'r-';
-IM_COLOUR = 'r--';
-MAG_COLOUR = 'r:';
-RE_COLOUR2 = 'g-';
-IM_COLOUR2 = 'g--';
-MAG_COLOUR2 = 'g:';
+RE_COLOUR = 'r';
+RE_COLOUR2 = 'g';
 RE_COLOUR3 = 'b';
-IM_COLOUR3 = 'b--';
-MAG_COLOUR3 = 'b:';
 LW = 2;
 
 figure(1);
@@ -82,7 +76,7 @@ if strcmp(EXCITATION_TYPE, 'intra')
     if MULTIPLE_SERIES
         plot(x_vals, angle(cond2(:, 1)) .* (180/pi), RE_COLOUR2, 'LineWidth', LW);
         
-        plot(x_vals, angle(cond3(:, 1)) .* (180/pi), RE_COLOUR3, 'LineWidth', LW);
+%         plot(x_vals, angle(cond3(:, 1)) .* (180/pi), RE_COLOUR3, 'LineWidth', LW);
     end
     title('2D Intraband Sheet Conductivity Phase');
 
@@ -93,7 +87,7 @@ elseif strcmp(EXCITATION_TYPE, 'inter')
     if MULTIPLE_SERIES
         plot(x_vals, angle(cond2(:, 2)) .* (180/pi), RE_COLOUR2, 'LineWidth', LW);
         
-        plot(x_vals, angle(cond3(:, 2)) .* (180/pi), RE_COLOUR3, 'LineWidth', LW);
+%         plot(x_vals, angle(cond3(:, 2)) .* (180/pi), RE_COLOUR3, 'LineWidth', LW);
     end
     title('2D Interband Sheet Conductivity Phase');
     
@@ -104,7 +98,7 @@ else
     if MULTIPLE_SERIES
         plot(x_vals, angle(sum(cond2, 2)) .* (180/pi), RE_COLOUR2, 'LineWidth', LW);
         
-        plot(x_vals, angle(sum(cond3, 2)) .* (180/pi), RE_COLOUR3, 'LineWidth', LW);
+%         plot(x_vals, angle(sum(cond3, 2)) .* (180/pi), RE_COLOUR3, 'LineWidth', LW);
     end
     title('2D Sheet Conductivity Phase');
 end
@@ -112,12 +106,13 @@ end
 set(gca,'Xscale','log')
 % set(gca,'Yscale','log')
 axis tight
+ylim([-90 90])
 
 if MULTIPLE_SERIES
-%     legend('\phi(TTF)', '\phi(CoCp_2)');
-%     legend('\phi(1x10^8m^{-2})', '\phi(1x10^{15}m^{-2})', '\phi(1.3x10^{17}m^{-2})');
-%     legend('\phi(10K)', '\phi(300K)', '\phi(2230K)');
-    legend('\phi(5x10^{-12} s)', '\phi(1x10^{-12} s)', '\phi(1x10^{-13} s)');
+    legend('TTF \phi(\sigma)', 'CoCp_2 \phi(\sigma)');
+%     legend('1x10^8m^{-2} \phi(\sigma)', '1x10^{15}m^{-2} \phi(\sigma)', '1.3x10^{17}m^{-2} \phi(\sigma)');
+%     legend('10K \phi(\sigma)', '300K \phi(\sigma)', '2230K \phi(\sigma)');
+%     legend('5x10^{-12} s \phi(\sigma)', '1x10^{-12} s \phi(\sigma)', '1x10^{-13} s \phi(\sigma)');
 else
     legend('\phi');
 end
